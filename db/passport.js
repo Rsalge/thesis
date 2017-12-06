@@ -18,20 +18,19 @@ module.exports = (passport) => {
       return done(null, password);
     },
   ));
-  passport.use('spotify', new SpotifyStrategy(
+  passport.use(new SpotifyStrategy(
     {
       clientID: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3001/auth/spotify/callback',
+      callbackURL: 'http://127.0.0.1:3001/api/auth/spotify/callback',
     },
     (accessToken, refreshToken, profile, done) => {
       console.log('SpotifyStrategy check');
-      User.findOrCreate(
-        { spotifyId: profile.id },
-        (err, user) => {
-          return done(err, user);
-        },
-      );
+      // User.findOrCreate(
+      //   { spotifyId: profile.id },
+      //   (err, user) => done(err, user),
+      // );
+      return done(accessToken)
     },
   ));
 };
