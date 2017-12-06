@@ -5,6 +5,13 @@ require('dotenv').config({ path: '../../env.env' });
 
 
 module.exports = (passport) => {
+  passport.serializeUser((user, done) => {
+    done(null, user);
+  });
+
+  passport.deserializeUser((obj, done) => {
+    done(null, obj);
+  });
   // Local Signup Strategy
   passport.use('local-signup', new LocalStrategy(
     { // http://www.passportjs.org/docs/login/ for more info
@@ -34,7 +41,7 @@ module.exports = (passport) => {
       //   { spotifyId: profile.id },
       //   (err, user) => done(err, user),
       // );
-      return done(null, accessToken);
+      return done(null, profile);
     },
   ));
 };
