@@ -10,7 +10,7 @@ const passport = require('passport');/* http://www.passportjs.org/docs */
 // const redirect = require('./redirect.html');
 
 const secret = 'myappisawesome';
-const HOME = 'http://127.0.0.1:3000';
+const HOME = 'https://tranquil-hollows-12097.herokuapp.com/';
 
 router.use('/spotifyAPI/:id', (req, res, next) => {
   let currentTimeAndDate = new Date();
@@ -101,9 +101,6 @@ router.get(
     const timeAndDate = new Date();
     session.tokenExpirationDate = timeAndDate;
     // Successful authentication, redirect home.
-    // res.set({ authorization: token });
-    // axios.defaults.headers.common.jwt = token;
-    // res.redirect(302, 'http://localhost:3000/home/'+req.user.spotifyId+'&token=' + token);
     res.sendFile(path.join(__dirname + '/index.html'));
   },
 );

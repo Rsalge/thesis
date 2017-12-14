@@ -4,7 +4,7 @@ import { Button, Menu, Header } from 'semantic-ui-react';
 import Search from './Search.jsx'
 import './NavBarContainer.css';
 
-const HOME = 'http://127.0.0.1:3000';
+const HOME = 'https://tranquil-hollows-12097.herokuapp.com/';
 
 class NavBarContainer extends React.Component {
   constructor(props) {
