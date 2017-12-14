@@ -42,7 +42,7 @@ export default class LandingPage extends Component {
     super(props)
     this.onClick = () => {
 
-      window.location.href = 'http://127.0.0.1:3001/api/auth/spotify/';// eslint-disable-line
+      window.location.href = 'https://tranquil-hollows-12097.herokuapp.com/api/auth/spotify/';// eslint-disable-line
     }
   }
 

@@ -17,6 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/TeamCRT/thesis.git"
   },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "keywords": [
     "music",
     "songs",
