@@ -17,7 +17,7 @@ module.exports = (passport) => {
     {
       clientID: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
-      callbackURL: 'https://tranquil-hollows-12097.herokuapp.com/api/auth/spotify/callback',
+      callbackURL: 'http://tranquil-hollows-12097.herokuapp.com/api/auth/spotify/callback',
     },
     (accessToken, refreshToken, profile, done) => {
       // check to see if the user already exists in the db

@@ -10,7 +10,7 @@ const passport = require('passport');/* http://www.passportjs.org/docs */
 // const redirect = require('./redirect.html');
 
 const secret = 'myappisawesome';
-const HOME = 'https://tranquil-hollows-12097.herokuapp.com/';
+const HOME = 'http://tranquil-hollows-12097.herokuapp.com/';
 
 router.use('/spotifyAPI/:id', (req, res, next) => {
   let currentTimeAndDate = new Date();
