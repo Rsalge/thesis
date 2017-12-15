@@ -160,8 +160,8 @@ class MySongModal extends Component {
     const { open, dimmer } = this.state
 
     return (
-      <div>
-        <Button style={{marginLeft: '50%'}} onClick={this.show(true)}>Edit your current MySong</Button>
+      <div {{textAlign: 'center'}}>
+        <Button onClick={this.show(true)}>Edit your current MySong</Button>
         <Modal dimmer={dimmer} open={open} onClose={this.close}>
           <Modal.Header>Change your MySong</Modal.Header>
           <Modal.Content image>
