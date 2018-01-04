@@ -75,7 +75,7 @@ class FollowingContainer extends React.Component {
           </Label>
           <div style={
             {
-              maxHeight: '500px',
+              maxHeight: '100%',
               overflow: 'scroll',
               overflowX: 'hidden',
             }}
